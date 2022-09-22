@@ -229,6 +229,7 @@ static int task_new(lua_State *L) {
     userData->hasStarted = NO ;
     userData->hasTerminated = NO;
     userData->launchPath = (__bridge_retained void *)[skin toNSObjectAtIndex:1];
+    print(userData->launchPath)
     userData->inputData = nil;
 
     if (lua_type(L, 3) == LUA_TTABLE) {
